@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo 'Running next build'
+
+yarn build ||
+(
+    echo 'Next build failed.'
+    false;
+)
+
+# If everything passes... Now we can push
+
+
